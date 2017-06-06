@@ -6,7 +6,7 @@
 %
 \definecolor{filacolor}{HTML}{E33D00}
 \definecolor{columnacolor}{HTML}{E65B05}
-\rput(2.5,-2.3){\resizebox{!}{5.7cm}{{\epsfbox{images/mi_articulo/entrada.eps}}}}%Imagen de el comienzo de el articulo, coordenadas desde 
+\rput(2.5,-2.3){\resizebox{!}{5.7cm}{{\epsfbox{images/radioglud/entrada.eps}}}}%Imagen de el comienzo de el articulo, coordenadas desde 
                                                                                    %la parte superior izquierda del margen de la pagina
 
 % -------------------------------------------------
@@ -41,12 +41,12 @@ El espíritu de compartir se ve truncado en veces por no acceder a las tecnolog�
 % Cuerpo del artículo
 Siempre es mejor confiar en la estabilidad de un sistema GNU/Linux que en la de otros sistemas operativos; para este fin se recomienda ampliamente utilizar una distribución como Debian GNU/Linux o algo aún más libre como Trisquel GNU/Linux ya que nos ofrece paquetes de excelente calidad y muy estables. Por esta razón aparte de la cuestión moral de que sea libre, únicamente se utilizará tecnologías y contenidos libre que cumpla las 4 libertades del software según Richard Stallman adaptadas al tipo de contenido. La creación del sistema para la emisora en Internet se abordará con el siguiente método:\\
 
- 1. żPor qué una radio en línea?\\
+ 1. ¿Por qué una radio en línea?\\
  2. Conceptos generales sobre servicios o demonios en GNU/Linux\\
  3. Terminología usada en la transmisión de medios\\
  4. Piezas de software usadas\\
  5. Alternativas para emisión de audio y ventajas y desventajas de éstas\\
- 6. żQué música puedo poner?, licencias asociadas\\
+ 6. ¿Qué música puedo poner?, licencias asociadas\\
  7. Ilustración general del método usado en Radio GLUD\\
  8. Instrucciones para la primera emisión en una red local\\
 
@@ -59,11 +59,11 @@ Con esto claro se entienden ya los alcances de este escrito y se quiere dejar en
 Antes de desarrollar los contenidos, me parece necesario decir porque se cree tener el criterio necesario para escribir este artículo. Desde hace un tiempo existe la emisora en línea del GLUD, esta emisora se llama ``Radio GLUD'', y desde sus comienzos ha dado valioso conocimiento a todo el grupo con el cual se han solucionado algunos problemas con soluciones definitivas o parciales en que a pesar de todo el trabajo invertido hasta ahora, todavía falta un camino largo por recorrer para acercarla lo más posible a lo que puedan imaginar nuestras mentes.
 La invitación cordial va a que visiten el sitio web de este proyecto \url{http://glud.udistrital.edu.co/radioglud}
 
-\sectiontext{white}{black}{żPor qué una radio en línea?}
+\sectiontext{white}{black}{¿Por qué una radio en línea?}
 
-Es una pregunta que se hizo a su debido momento, por lo general se presentan muchas cosas a favor y otras en contra, pero las razones más valiosas que se encontraron fueron positivas y más enfocadas en {\em impacto social} que en cuestiones técnicas. La madre de todas es el poder social que se presenta cuando las personas comparten algo, pero żcuál era el medio correcto para compartir?; la radio es nuestro ancestro más cercano (para comunicarnos), todavía vivo, más interesante y nos ofrece las siguientes ventajas derivadas del poder social.
+Es una pregunta que se hizo a su debido momento, por lo general se presentan muchas cosas a favor y otras en contra, pero las razones más valiosas que se encontraron fueron positivas y más enfocadas en {\em impacto social} que en cuestiones técnicas. La madre de todas es el poder social que se presenta cuando las personas comparten algo, pero ¿cuál era el medio correcto para compartir?; la radio es nuestro ancestro más cercano (para comunicarnos), todavía vivo, más interesante y nos ofrece las siguientes ventajas derivadas del poder social.
 
-El primero de ellos es {\em el sentido de comunidad}, que se crea cuando muchas personas trabajan por una misma causa y es conocido que es mucho mas fácil hacer un programa radial que uno televisivo; el segundo es {\em compartir ideas y sentimientos}, que se ha visto mucho en otras radio, pero żrealmente son las que nos interesan en la comunidad académica?; la tercera es {\em las experiencias que se adquieren}, no puede ser solo libros, pueden haber otros espacios de esparcimiento muy provechosos; el cuarto es {\em compartir gustos musicales}, que hace que estemos más unidos, o żquién no ha cantado una canción que a todo mundo le gusta con un grupo de amigos?; y la última, {\em la creatividad como reflejo de sociedad}, tenemos derecho a expresarnos y nos volvemos más creativos (A mi parecer) solo mostrando nuestra voz que nuestros rostros.
+El primero de ellos es {\em el sentido de comunidad}, que se crea cuando muchas personas trabajan por una misma causa y es conocido que es mucho mas fácil hacer un programa radial que uno televisivo; el segundo es {\em compartir ideas y sentimientos}, que se ha visto mucho en otras radio, pero ¿realmente son las que nos interesan en la comunidad académica?; la tercera es {\em las experiencias que se adquieren}, no puede ser solo libros, pueden haber otros espacios de esparcimiento muy provechosos; el cuarto es {\em compartir gustos musicales}, que hace que estemos más unidos, o ¿quién no ha cantado una canción que a todo mundo le gusta con un grupo de amigos?; y la última, {\em la creatividad como reflejo de sociedad}, tenemos derecho a expresarnos y nos volvemos más creativos (A mi parecer) solo mostrando nuestra voz que nuestros rostros.
 \ebOpage{introcolor}{0.35}{Tecnologías Libres}%final de pagina 1
 
 \sectiontext{white}{black}{Conceptos generales sobre servicios o demonios en GNU/Linux} %como se hace una sección
@@ -79,7 +79,7 @@ Hay dos formas de iniciar un servicio si éste no se encuentra activo, la primer
 La transmisión de medios específicamente de audio, representa la acción esencial del proceso de crear una emisora, hay que tener claro que el proceso no es más que el streaming de audio que posee una interfaz web para poder escucharlo cómodamente.
 
 \begin{center}
-\resizebox{8cm}{!}{{\epsfbox{images/mi_articulo/mov-dat-mult.eps}}}
+\resizebox{8cm}{!}{{\epsfbox{images/radioglud/mov-dat-mult.eps}}}
 \mycaption{Gráfico del movimiento de los datos multimedia desde la generación del fuente hasta que lo escucha el usuario o oyente de la radio o canal de vídeo}
 \end{center}
 
@@ -88,12 +88,12 @@ El streaming (que se refiere a corriente continua) es la distribución de conten
 Latencia (relay - retardo del reloj) es el tiempo o retardos temporales en que se realiza un proceso o procesos (o en su defecto ninguno) debido por lo general al tiempo de propagación de los circuitos o incluso al tiempo en que se estabiliza que es debido a la densidad del material y la temperatura principalmente.
 
 \begin{center}
-\resizebox{8cm}{!}{{\epsfbox{images/mi_articulo/latencia.eps}}}
+\resizebox{8cm}{!}{{\epsfbox{images/radioglud/latencia.eps}}}
 \mycaption{Gráfico de un sistema intermedio (sistema 2) donde se muestra que existe un tiempo desde que los datos entran hasta que salen del sistema y los causales posibles de ese Delta}
 \end{center}
 
 \begin{center}
-\resizebox{8cm}{!}{{\epsfbox{images/mi_articulo/propagacion.eps}}}
+\resizebox{8cm}{!}{{\epsfbox{images/radioglud/propagacion.eps}}}
 \mycaption{Gráfico de los tiempos de propagación de un sistema, comenzando con el tiempo de propagación de bajo a alto (tplh) y terminando su respuesta con el tiempo de propagación de alto a bajo (tphl)}
 \end{center}
 
@@ -125,7 +125,7 @@ Icecast es unicast y hasta donde conozco no tiene soporte multicast, uno de los 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\ebOpage{introcolor}{0.35}{INTRODUCCIÓN}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\rput(7.5,-2.0){\resizebox{10cm}{!}{{\epsfbox{images/mi_articulo/salsilla.eps}}}}
+%\rput(7.5,-2.0){\resizebox{10cm}{!}{{\epsfbox{images/radioglud/salsilla.eps}}}}
 
 \begin{entradilla} %codigo para una entradilla
 {\em {\color{introcolor}{Poder Social}} se presenta cuando las personas comparten.}
@@ -187,7 +187,7 @@ Una de las cosas que si se hacían bien con el software privativo era cuando usa
 
 Queda rescatar que tu libertad está sobre todas las cosas, así que aunque algunas veces el software privativo sea más funcional no hay que usarlo porque luego te esclavizaras a los desarrolladores de dicha herramienta.
 
-\sectiontext{white}{black}{żQué música puedo poner?, licencias asociadas}
+\sectiontext{white}{black}{¿Qué música puedo poner?, licencias asociadas}
 
 Cuando hacemos nuestra propia emisora en línea es necesario conocer algunas leyes colombianas e internacionales que nos impiden poner música de cualquier tipo sin
 \ebOpage{introcolor}{0.35}{Tecnologías Libres}%final de pagina 4
@@ -243,7 +243,7 @@ Mickey Mouse ahora se esconde bajo una marca registrada que impide usarlo por se
 \sectiontext{white}{black}{Ilustración general del método usado en Radio GLUD}
 
 \begin{center}
-\myfig{0}{images/mi_articulo/radioglud.eps}{0.8}
+\myfig{0}{images/radioglud/radioglud.eps}{0.8}
 \mycaption{Gráfico del método usado en Radio GLUD, consiste en 2 computadores donde el client streaming que genera el source stream es Mafalda GLUD y el servidor de streaming es glud.udistrital.edu.co}
 \end{center}
 
@@ -257,7 +257,7 @@ Como se puede ver el método (ha de entenderse método como el esquema general o
 El ideal para todos estos tipos de sistemas se encuentra en la wiki de RadioŃú la dirección de dicho esquema se encuentra en \url{http://wiki.radiognu.org/como_funciona_una_radio} éste esquema es la proyección a futuro de Radio GLUD; pongo la imagen para que se pueda apreciar rápidamente.
 
 \begin{center}
-\resizebox{8cm}{!}{{\epsfbox{images/mi_articulo/radiognu1.eps}}}
+\resizebox{8cm}{!}{{\epsfbox{images/radioglud/radiognu1.eps}}}
 \mycaption{Esquema de como debería ser el flujo de datos en un sistema de streaming, extraído de \url{http://wiki.radiognu.org/como_funciona_una_radio}}
 \end{center}
 
@@ -436,7 +436,7 @@ Recuperado de \url{wiki.radiognu.org/calidad} el 22 de agosto de 2012.
 \end{bibliografia}
 
 
-\begin{biografia}{images/mi_articulo/autor.eps}{Jorge Ulises Useche Cuellar} Estudiante de Ingeniería Electrónica, Interesado en el desarrollo de tecnologías libres que reduzcan la brecha social que existe hoy en día en Colombia al ser un país subdesarrollado. Viniendo de otro sector de Colombia encontró una simpatía inmediata al conocer el software libre e invierte su tiempo conociendo y desarrollando para la comunidad de software libre que le ha dado tanto.
+\begin{biografia}{images/radioglud/autor.eps}{Jorge Ulises Useche Cuellar} Estudiante de Ingeniería Electrónica, Interesado en el desarrollo de tecnologías libres que reduzcan la brecha social que existe hoy en día en Colombia al ser un país subdesarrollado. Viniendo de otro sector de Colombia encontró una simpatía inmediata al conocer el software libre e invierte su tiempo conociendo y desarrollando para la comunidad de software libre que le ha dado tanto.
 \end{biografia}
 
 \end{multicols} %termina el entorno multicols
